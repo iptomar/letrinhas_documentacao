@@ -1,0 +1,98 @@
+﻿extends layout
+
+block content
+
+    h1 Adicionar teste de escolha múltipla (imagens)
+
+    hr
+
+    form(novalidate, id="letrinhas-add-form", class="form-horizontal", method="POST", action="/BackOffice/Tests/Create/Multimedia", enctype="multipart/form-data")
+
+        input(type="hidden" name="type" value="2")
+        
+        div(class="form-group")
+            label(for="title", class="control-label col-sm-2") Título do teste
+
+            div(class="col-sm-10")
+                input(type="text", id="title", name="title", required, class="form-control", placeholder="A História da Carochinha")
+
+        div(class="form-group")
+            label(for="mainText", class="control-label col-sm-2") Subtítulo
+
+            div(class="col-sm-10")
+                input(type="text", id="mainText", name="mainText", required, class="form-control", placeholder="Resolve o seguinte problema")
+
+        div(class="form-group")
+            label(for="areaId", class="control-label col-sm-2") Disciplina
+            div(class="col-sm-10")
+                select(name="areaId", id="areaId", class="form-control")
+                    option(value="1") Português
+                    option(value="2") Matemática
+                    option(value="3") Estudo do Meio
+                    option(value="4") Inglês
+
+        div(class="form-group")
+            label(for="questionContent", class="control-label col-sm-2") Pergunta
+
+            div(class="col-sm-10")
+                input(type="file", id="questionContent", name="questionContent", required, accept="image/*" class="form-control-static")
+
+        div(class="form-group")
+            label(for="option1", class="control-label col-sm-2") Opção 1
+
+            div(class="col-sm-10")
+                div(class="input-group")
+                    span(class="input-group-addon")
+                        input(type="radio" name="correctOption" value="1" checked)
+
+                    input(type="file", id="option1", name="option1", required, accept="image/*" class="form-control")
+
+        div(class="form-group")
+            label(for="option2", class="control-label col-sm-2") Opção 2
+
+            div(class="col-sm-10")
+                div(class="input-group")
+                    span(class="input-group-addon")
+                        input(type="radio" name="correctOption" value="2")
+
+                    input(type="file", id="option2", name="option2", required, accept="image/*" class="form-control")
+
+        div(class="form-group")
+            label(for="option3", class="control-label col-sm-2") Opção 3
+
+            div(class="col-sm-10")
+                div(class="input-group")
+                    span(class="input-group-addon")
+                        input(type="radio" name="correctOption" value="3")
+
+                    input(type="file", id="option3", name="option3", required, accept="image/*" class="form-control")
+        
+        div(class="form-group")
+            label(for="grade", class="control-label col-sm-2") Grau escolar
+            div(class="col-sm-10")
+                select(name="grade", id="grade", class="form-control")
+                    option(value="1") 1º
+                    option(value="2") 2º
+                    option(value="3") 3º
+                    option(value="4") 4º
+        
+        div(class="form-group")
+            label(for="professorId", class="control-label col-sm-2") Professor
+
+            div(class="col-sm-10")
+                select(name="professorId" class="form-control")
+                    each prof in professorList
+                        option(value="#{prof.id}")= prof.name
+
+        div(class="form-group")
+            div(class="col-sm-offset-2 col-sm-10")
+                input(type="submit", class="btn btn-primary" id="form-submit", value="Adicionar")
+
+block additionalScripts
+    script(src="/scripts/jquery/jquery.validate.min.js")
+    script(src="/scripts/jquery/messages_pt_PT.js")
+
+    script.
+        (function () {
+            $('#letrinhas-add-form').validate();
+        }());

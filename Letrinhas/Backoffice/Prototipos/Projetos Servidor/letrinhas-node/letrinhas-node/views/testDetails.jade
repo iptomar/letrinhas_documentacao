@@ -1,0 +1,21 @@
+﻿extends layout
+
+block content
+    h1 Detalhes do teste
+
+    h3= test.title
+
+    dl(class="dl-horizontal")
+        dt Texto
+        dd
+            each line in test.textContent.split('\n')
+                p= line
+
+                
+
+    dl(class="dl-horizontal")
+        dt Voz do professor
+        dd 
+            audio(src="/#{test.professorAudioUrl}" controls="controls")
+            
+    a(href="/") Voltar

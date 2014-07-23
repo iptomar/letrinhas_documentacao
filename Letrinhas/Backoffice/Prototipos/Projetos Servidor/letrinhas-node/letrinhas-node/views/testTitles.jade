@@ -1,0 +1,52 @@
+﻿extends layout
+
+block content
+    h1 Testes
+    
+    if (items.length === 0)
+        div(class="alert alert-warning") Sem resultados
+    else
+        div(class="table-responsive")
+            table(class="table table-striped")
+                thead
+                    th Titulo
+                    th Pergunta
+                    th Ano
+                    th Professor
+                    th Data
+                    th Área
+                    th Tipo
+                    th Ações
+
+                each item in items
+                    tr 
+                        td #{item.title} 
+                        td #{item.mainText}
+                        td #{item.grade}
+                        td #{item.name}
+                        td #{item.creationDate}
+                        td
+                            case item.areaId
+                                when 1
+                                    span Português
+                                when 2
+                                    span Matemática
+                                when 3
+                                    span Estudo do Meio
+                                when 4
+                                    span Inglês
+
+                        td
+                            case item.type
+                                when 0
+                                    span Texto
+                                when 1
+                                    span Escolha Múltipla
+                                when 2
+                                    span Lista de Palavras
+                                when 3
+                                    span Poema
+                        td
+                            a(href="/BackOffice/Tests/Details/#{item.id}") Ver Detalhes
+                
+        a(href="/") Voltar

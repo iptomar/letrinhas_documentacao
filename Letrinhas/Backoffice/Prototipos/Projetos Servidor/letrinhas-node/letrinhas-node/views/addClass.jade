@@ -1,0 +1,50 @@
+﻿extends layout
+
+block content
+
+    h1 Adicionar Turma
+
+    form(novalidate, id="letrinhas-add-form" method="POST", action="/BackOffice/Classes/Create" enctype="multipart/form-data" role="form" class="form-horizontal") 
+        div(class="form-group")
+            label(for="schoolId", class="control-label col-sm-2") Escola
+
+            div(class="col-sm-10")
+                select(name="schoolId", id="schoolId", class="form-control")
+                    each school in escolas
+                        option(value="#{school.id}")= school.schoolName
+
+        div(class="form-group")
+            label(for="year_filter", class="control-label col-sm-2") Grau escolar
+            div(class="col-sm-10")
+                select(name="year_filter", id="year_filter", class="form-control")
+                    option(value="1") 1º
+                    option(value="2") 2º
+                    option(value="3") 3º
+                    option(value="4") 4º
+
+        div(class="form-group")
+            label(for="className", class="control-label col-sm-2") Nome da turma
+
+            div(class="col-sm-10")
+                input(type="text", id="className", name="className", required, maxlength="20" class="form-control", placeholder="Nome")
+
+        div(class="form-group")
+            label(for="classYear", class="control-label col-sm-2") Ano Letivo
+            div(class="col-sm-10")
+                select(name="classYear", id="classYear", class="form-control")
+                    - var curYear = new Date().getFullYear() - 1;
+                    each item in [curYear, curYear + 1, curYear + 2, curYear + 3]
+                        option(value="#{item}-#{item + 1}") #{item}-#{item + 1}
+        
+        div(class="form-group")                        
+            div(class="col-sm-offset-2 col-sm-10")
+                input(type="submit", class="btn btn-primary" id="form-submit", value="Adicionar")
+
+block additionalScripts
+    script(src="/scripts/jquery/jquery.validate.min.js")
+    script(src="/scripts/jquery/messages_pt_PT.js")
+
+    script.
+        (function () {
+            $('#letrinhas-add-form').validate();
+        }());

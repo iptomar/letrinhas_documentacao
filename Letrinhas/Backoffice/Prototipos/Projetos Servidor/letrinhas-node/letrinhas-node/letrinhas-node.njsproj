@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ExpressApp7</Name>
+    <RootNamespace>ExpressApp7</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>83aac9f6-1094-40fc-8ce9-2ca0fe8ccbac</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <NodejsPort>8080</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="routes\apiRouteMappings.ts" />
+    <TypeScriptCompile Include="routes\Api\Classes.ts" />
+    <TypeScriptCompile Include="routes\backOfficeRouteMappings.ts" />
+    <TypeScriptCompile Include="routes\BackOffice\Classes.ts" />
+    <TypeScriptCompile Include="routes\BackOffice\Professors.ts" />
+    <TypeScriptCompile Include="routes\BackOffice\Schools.ts" />
+    <TypeScriptCompile Include="routes\BackOffice\Students.ts" />
+    <TypeScriptCompile Include="routes\BackOffice\Tests.ts" />
+    <TypeScriptCompile Include="routes\Index.ts" />
+    <TypeScriptCompile Include="routes\Api\Tests.ts" />
+    <TypeScriptCompile Include="configs\mysql.ts" />
+    <TypeScriptCompile Include="Scripts\structures\schools\Class.ts" />
+    <TypeScriptCompile Include="Scripts\structures\schools\Professor.ts" />
+    <TypeScriptCompile Include="Scripts\structures\schools\ProfessorClass.ts" />
+    <TypeScriptCompile Include="Scripts\structures\schools\School.ts" />
+    <TypeScriptCompile Include="Scripts\structures\schools\Student.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\MultimediaTest.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\ReadingTest.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\ReadingTestCorrection.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\MultimediaTestCorrection.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\Test.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\TestCorrection.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\TestSummary.ts" />
+    <TypeScriptCompile Include="Scripts\structures\tests\TestType.ts" />
+    <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mkdirp\mkdirp.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mysql\mysql.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node-uuid\node-uuid.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="configs\routes.ts" />
+    <TypeScriptCompile Include="Scripts\typings\mv\mv.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\q\q.d.ts" />
+    <TypeScriptCompile Include="routes\Api\Students.ts" />
+    <TypeScriptCompile Include="routes\Api\Schools.ts" />
+    <TypeScriptCompile Include="routes\Api\Professors.ts" />
+    <TypeScriptCompile Include="Scripts\services\classService.ts" />
+    <TypeScriptCompile Include="Scripts\services\schoolService.ts" />
+    <TypeScriptCompile Include="Scripts\services\studentService.ts" />
+    <TypeScriptCompile Include="Scripts\services\professorService.ts" />
+    <TypeScriptCompile Include="Scripts\services\testService.ts" />
+    <Content Include="public\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="public\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="public\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="public\bootstrap\css\bootstrap.css" />
+    <Content Include="public\bootstrap\css\bootstrap.css.map" />
+    <Content Include="public\bootstrap\css\bootstrap.min.css" />
+    <Content Include="public\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\scripts\formtest.ts" />
+    <Content Include="public\stylesheets\style.css" />
+    <Content Include="views\addClass.jade" />
+    <Content Include="views\addMultimediaTest.jade" />
+    <Content Include="views\addMultimediaTest2.jade" />
+    <Content Include="views\addMultimediaTest3.jade" />
+    <Content Include="views\addReadingTest.jade" />
+    <Content Include="views\addSchool.jade" />
+    <Content Include="views\addStudent.jade" />
+    <Content Include="views\addTeacher.jade" />
+    <Content Include="views\changeStudentClass.jade" />
+    <Content Include="views\classList.jade" />
+    <Content Include="views\editSchool.jade" />
+    <Content Include="views\editSucess.jade" />
+    <Content Include="views\editTeacher.jade" />
+    <Content Include="views\Erros\400.jade" />
+    <Content Include="views\Erros\404.jade" />
+    <Content Include="views\Erros\500.jade" />
+    <Content Include="views\index.jade" />
+    <Content Include="views\listError.jade" />
+    <Content Include="views\multimediaTestDetails.jade" />
+    <Content Include="views\multimediaTipoEscolhe.jade" />
+    <Content Include="views\professorList.jade" />
+    <Content Include="views\schoolList.jade" />
+    <Content Include="views\submissionsList.jade" />
+    <Content Include="views\studentList.jade" />
+    <Content Include="views\testDetails.jade" />
+    <Content Include="views\testTitles.jade" />
+    <Content Include="views\layout.jade" />
+    <Content Include="README.md" />
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\bootstrap\" />
+    <Folder Include="public\bootstrap\css\" />
+    <Folder Include="public\bootstrap\fonts\" />
+    <Folder Include="public\bootstrap\js\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\scripts\" />
+    <Folder Include="public\scripts\jquery\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="routes\Api\" />
+    <Folder Include="routes\BackOffice\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="configs\" />
+    <Folder Include="Scripts\typings\jquery\" />
+    <Folder Include="Scripts\typings\mkdirp\" />
+    <Folder Include="Scripts\typings\mv\" />
+    <Folder Include="Scripts\typings\node-uuid\" />
+    <Folder Include="Scripts\typings\q\" />
+    <Folder Include="Scripts\structures\" />
+    <Folder Include="Scripts\services\" />
+    <Folder Include="Scripts\structures\tests\" />
+    <Folder Include="Scripts\structures\schools\" />
+    <Folder Include="Scripts\typings\" />
+    <Folder Include="Scripts\typings\express\" />
+    <Folder Include="Scripts\typings\mysql\" />
+    <Folder Include="Scripts\typings\node\" />
+    <Folder Include="views\" />
+    <Folder Include="views\Erros\" />
+    <Folder Include="views\Home\" />
+    <Folder Include="views\Professors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="public\bootstrap\js\bootstrap.js" />
+    <Compile Include="public\bootstrap\js\bootstrap.min.js" />
+    <Compile Include="public\scripts\formtest.js" />
+    <Compile Include="public\scripts\jquery\jquery-2.1.1.min.js" />
+    <Compile Include="public\scripts\jquery\jquery.validate.min.js" />
+    <Compile Include="public\scripts\jquery\messages_pt_PT.js" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

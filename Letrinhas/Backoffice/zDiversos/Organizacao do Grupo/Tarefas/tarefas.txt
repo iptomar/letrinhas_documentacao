@@ -1,0 +1,14 @@
+﻿Tarefas para o dia 27 Março;
+-- Webservice (Servidor) -> André, Luís, João
+	--GET -> Feito
+	--POST -> ?
+-- Webservice (App) -> Alex, Joni
+	--Visual -> Feito
+	--GET -> Feito
+	--POST -> ?
+--Documentar Tecnologias ->
+documento tecnlogias-> feito
+	
+--Reunião no dia 25 (13h-15h)
+	
+
